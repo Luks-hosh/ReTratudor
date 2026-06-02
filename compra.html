@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINGUA — Configurar Pedido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">LINGU<span>A</span></a>
+      <a href="cadastro.html" class="header-profile" aria-label="Minha Conta">
+        <span class="profile-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </span>
+        Minha&nbsp;Conta
+      </a>
+    </div>
+  </header>
+
+  <!-- ========== CONTEÚDO ========== -->
+  <section class="page-section">
+    <div class="container">
+      <h1 class="page-title">Configure Seu Pedido</h1>
+      <p class="page-subtitle">Escolha a cor, a quantidade e finalize quando estiver pronto.</p>
+
+      <div class="order-grid">
+        <!-- Imagem do Produto -->
+        <div class="order-image">
+          <img
+            src="./img/Captura de tela 2026-06-02 150027.png"
+            alt="Relógio Tradutor LINGUA em fundo escuro"
+          >
+        </div>
+
+        <!-- Configuração -->
+        <div class="order-config">
+          <h2>Relógio Tradutor LINGUA</h2>
+          <p class="product-sku">SKU: LNG-TR-2025</p>
+
+          <form action="pagamento.html" oninput="total.value = (quant.valueAsNumber * 1200).toLocaleString('pt-BR')">
+
+            <!-- Cor da Pulseira -->
+            <span class="color-label">Cor da Pulseira</span>
+            <div class="color-options">
+              <input type="radio" name="cor" id="cor-preto" value="Preto" checked>
+              <label for="cor-preto">
+                <span class="swatch swatch--black"></span> Preto
+              </label>
+
+              <input type="radio" name="cor" id="cor-cinza" value="Cinza">
+              <label for="cor-cinza">
+                <span class="swatch swatch--gray"></span> Cinza
+              </label>
+
+              <input type="radio" name="cor" id="cor-branco" value="Branco">
+              <label for="cor-branco">
+                <span class="swatch swatch--white"></span> Branco
+              </label>
+            </div>
+
+            <!-- Quantidade -->
+            <div class="qty-group">
+              <label for="quant">Quantidade</label>
+              <input type="number" name="quant" id="quant" min="1" value="1">
+            </div>
+
+            <!-- Total -->
+            <div class="order-total">
+              <span>Total do Pedido</span>
+              <output name="total" for="quant">1.200</output>
+              <span style="font-size:1.1rem;color:var(--blue-accent);font-weight:700;"> BRL</span>
+            </div>
+
+            <!-- Avançar -->
+            <button type="submit" class="btn btn-primary btn-block">Avançar para o Pagamento</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 <span>LINGUA</span>. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
